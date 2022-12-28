@@ -1,0 +1,205 @@
+.prices {
+
+  .title-wrapper {
+    display: flex;
+    grid-column: 1 / 3;
+
+    .title-h2 {
+      width: 230px;
+    }
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 75px 30px;
+  }
+
+  .tariff {
+    position: relative;
+    z-index: 10;
+
+    padding: 60px 40px;
+
+    background: linear-gradient(227.74deg, #4099F9 6.1%, #107CF0 50.21%, #107CEF 98.09%);
+    box-shadow: 0px 91px 37px rgba(0, 127, 248, 0.01), 0px 51px 31px rgba(0, 127, 248, 0.05), 0px 23px 23px rgba(0, 127, 248, 0.09), 0px 6px 13px rgba(0, 127, 248, 0.1), 0px 0px 0px rgba(0, 127, 248, 0.1);
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -450px;
+      right: -390px;
+      z-index: -10;
+
+      width: 638.52px;
+      height: 638.52px;
+
+      background: #F05C28;
+      border-radius: 50%;
+    }
+
+    .tariff__name {
+      font-family: $font-1;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+
+    .tariff__price {
+      margin-top: 16px;
+
+      font-family: $font-1;
+      font-weight: 700;
+      font-size: 77.0153px;
+      line-height: 78px;
+      letter-spacing: -1.08472px;
+      color: #FFFFFF;
+
+      span {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: -0.498233px;
+      }
+    }
+
+    .tariff-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 35px 45px;
+      margin-top: 40px;
+
+      .tariff-list__item {
+        position: relative;
+
+        padding-left: 60px;
+
+        font-family: $font-2;
+        font-size: 18px;
+        line-height: 24px;
+        color: #F0F7FF;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          width: 38px;
+          height: 38px;
+
+          border-radius: 50%;
+          border: 1px solid rgba(226, 226, 226, 0.3);
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 14px;
+          left: 10px;
+
+          width: 21px;
+          height: 13px;
+
+          background-size: contain;
+          background-image: url("../img/check.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+    }
+
+    .tariff__btn {
+      margin-top: 40px;
+
+      color: #1685FC;
+
+      background: #FFFFFF;
+    }
+  }
+
+  .description {
+    position: relative;
+    z-index: 10;
+
+    padding: 60px 40px;
+
+    background: linear-gradient(71.24deg, #E6EDFF -1.41%, #E2F8FF 101.34%), linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #FFFFFF, #FFFFFF), url(image.png);
+    box-shadow: 0px 44px 18px rgba(177, 176, 201, 0.01), 0px 25px 15px rgba(177, 176, 201, 0.05), 0px 11px 11px rgba(177, 176, 201, 0.09), 0px 3px 6px rgba(177, 176, 201, 0.1), 0px 0px 0px rgba(177, 176, 201, 0.1);
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 40px;
+      right: -10px;
+      z-index: -10;
+
+      width: 383px;
+      height: 249px;
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("../img/img8.svg");
+    }
+
+    .description__title {
+      font-family: $font-1;
+      font-weight: 700;
+      font-size: 38.4818px;
+      line-height: 39px;
+      letter-spacing: -0.541997px;
+      color: #090207;
+    }
+
+    .description__txt {
+      margin-top: 30px;
+
+      font-family: $font-2;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 35px;
+      color: #313031;
+    }
+
+    .description__price {
+      margin-top: 40px;
+
+      font-family: $font-1;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #090207;
+    }
+
+    .description__name {
+      margin-top: 8px;
+
+      font-family: $font-1;
+      font-weight: 700;
+      font-size: 29.0657px;
+      line-height: 29px;
+      letter-spacing: -0.409376px;
+      color: #090207;
+    }
+
+    .description__btn {
+      margin-top: 60px;
+
+      color: #FFFFFF;
+
+      background: #117DF0;
+    }
+  }
+}

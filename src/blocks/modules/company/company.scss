@@ -1,0 +1,83 @@
+.company {
+  padding-top: 280px;
+  padding-bottom: 130px;
+  margin-top: -110px;
+
+  background: #F5F5F5;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 110px;
+  }
+
+  .img-wrapper {
+    width: 500px;
+    height: 630px;
+    margin-left: 70px;
+    flex-shrink: 0;
+
+    filter: drop-shadow(0px 88px 35px rgba(0, 0, 0, 0.01)) drop-shadow(0px 50px 30px rgba(0, 0, 0, 0.05)) drop-shadow(0px 22px 22px rgba(0, 0, 0, 0.09)) drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  .txt-wrapper {
+    padding-top: 20px;
+
+    .company__subtitle {
+      margin-top: 5px;
+
+      font-family: $font-1;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 55px;
+      letter-spacing: -1px;
+      color: #090207;
+    }
+
+    .company__txt {
+      margin-top: 40px;
+      max-width: 550px;
+
+      font-family: $font-2;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 35px;
+      color: #313031;
+    }
+
+    .company-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 45px;
+      margin-top: 60px;
+
+      .company-list__title {
+        font-family: $font-1;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #222222;
+      }
+
+      .company-list__txt {
+        margin-top: 10px;
+
+        font-family: $font-2;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 35px;
+        color: #313031;
+      }
+    }
+  }
+}
