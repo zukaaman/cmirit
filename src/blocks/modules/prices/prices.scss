@@ -4,6 +4,20 @@
     display: flex;
     grid-column: 1 / 3;
 
+    @include w992 {
+      grid-column: auto;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    @include w768 {
+      gap: 10px;
+    }
+
+    .prices__title {
+      color: #222222;
+    }
+
     .title-h2 {
       width: 230px;
     }
@@ -13,6 +27,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 75px 30px;
+
+    @include w992 {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
   }
 
   .tariff {
@@ -23,9 +42,20 @@
 
     background: linear-gradient(227.74deg, #4099F9 6.1%, #107CF0 50.21%, #107CEF 98.09%);
     box-shadow: 0px 91px 37px rgba(0, 127, 248, 0.01), 0px 51px 31px rgba(0, 127, 248, 0.05), 0px 23px 23px rgba(0, 127, 248, 0.09), 0px 6px 13px rgba(0, 127, 248, 0.1), 0px 0px 0px rgba(0, 127, 248, 0.1);
-    border-radius: 5px;
+    border-radius: 10px;
 
     overflow: hidden;
+
+    @include w992 {
+      margin-top: 50px;
+    }
+
+    @include w768 {
+      margin-top: 30px;
+      padding: 40px 30px;
+
+      border-radius: 5px;
+    }
 
     &::before {
       content: "";
@@ -39,6 +69,14 @@
 
       background: #F05C28;
       border-radius: 50%;
+
+      @include w768 {
+        top: -160px;
+        right: -130px;
+
+        width: 260px;
+        height: 260px;
+      }
     }
 
     .tariff__name {
@@ -49,6 +87,11 @@
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: #FFFFFF;
+
+      @include w768 {
+        font-size: 14.0624px;
+        line-height: 18px;
+      }
     }
 
     .tariff__price {
@@ -61,11 +104,23 @@
       letter-spacing: -1.08472px;
       color: #FFFFFF;
 
+      @include w768 {
+        font-size: 58.3935px;
+        line-height: 59px;
+        letter-spacing: -0.822444px;
+      }
+
       span {
         font-weight: 300;
         font-size: 24px;
         line-height: 36px;
         letter-spacing: -0.498233px;
+
+        @include w768 {
+          font-size: 21.0936px;
+          line-height: 32px;
+          letter-spacing: -0.437898px;
+        }
       }
     }
 
@@ -74,6 +129,11 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 35px 45px;
       margin-top: 40px;
+
+      @include w768 {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
 
       .tariff-list__item {
         position: relative;
@@ -85,10 +145,17 @@
         line-height: 24px;
         color: #F0F7FF;
 
+        @include w768 {
+          padding-left: 50px;
+
+          font-size: 16px;
+          line-height: 22px;
+        }
+
         &::before {
           content: "";
           position: absolute;
-          top: 0;
+          top: -7px;
           left: 0;
 
           width: 38px;
@@ -96,12 +163,19 @@
 
           border-radius: 50%;
           border: 1px solid rgba(226, 226, 226, 0.3);
+
+          @include w768 {
+            top: -6px;
+
+            width: 32px;
+            height: 32px;
+          }
         }
 
         &::after {
           content: "";
           position: absolute;
-          top: 14px;
+          top: 8px;
           left: 10px;
 
           width: 21px;
@@ -111,6 +185,14 @@
           background-image: url("../img/check.svg");
           background-repeat: no-repeat;
           background-position: center;
+
+          @include w768 {
+            top: 5px;
+            left: 9px;
+
+            width: 18px;
+            height: 12px;
+          }
         }
       }
     }
@@ -121,6 +203,14 @@
       color: #1685FC;
 
       background: #FFFFFF;
+
+      @include w768 {
+        margin-top: 50px;
+      }
+
+      @include w600 {
+        width: 100%;
+      }
     }
   }
 
@@ -136,6 +226,17 @@
 
     overflow: hidden;
 
+    @include w992 {
+      margin-top: 50px;
+    }
+
+    @include w768 {
+      margin-top: 30px;
+      padding: 200px 30px 40px;
+
+      border-radius: 5px;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -150,6 +251,16 @@
       background-position: center;
       background-size: contain;
       background-image: url("../img/img8.svg");
+
+      @include w768 {
+        bottom: calc(100% - 198px);
+        right: 50%;
+
+        width: 304px;
+        height: 198px;
+
+        transform: translateX(50%);
+      }
     }
 
     .description__title {
@@ -159,6 +270,12 @@
       line-height: 39px;
       letter-spacing: -0.541997px;
       color: #090207;
+
+      @include w768 {
+        font-size: 28px;
+        line-height: 35px;
+        letter-spacing: -0.573708px;
+      }
     }
 
     .description__txt {
@@ -169,6 +286,13 @@
       font-size: 18px;
       line-height: 35px;
       color: #313031;
+
+      @include w768 {
+        margin-top: 15px;
+
+        font-size: 16px;
+        line-height: 30px;
+      }
     }
 
     .description__price {
@@ -200,6 +324,14 @@
       color: #FFFFFF;
 
       background: #117DF0;
+
+      @include w768 {
+        margin-top: 50px;
+      }
+
+      @include w600 {
+        width: 100%;
+      }
     }
   }
 }

@@ -5,15 +5,43 @@
 
   background: #F5F5F5;
 
+  @include w768 {
+    padding-top: 200px;
+    padding-bottom: 80px;
+    margin-top: -100px;
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
     gap: 110px;
+
+    @include w1392 {
+      gap: 50px;
+    }
+
+    @include w992 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include w768 {
+      gap: 60px;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .company__title {
+    color: #090207;
+
+    @include w768 {
+      color: #7D7D7D;
+    }
   }
 
   .img-wrapper {
     width: 500px;
-    height: 630px;
+    min-height: 630px;
     margin-left: 70px;
     flex-shrink: 0;
 
@@ -21,6 +49,24 @@
     border-radius: 10px;
 
     overflow: hidden;
+
+    @include w1392 {
+      width: 450px;
+      margin-left: 0;
+    }
+
+    @include w992 {
+      width: auto;
+    }
+
+    @include w768 {
+      min-height: 0;
+      height: 525px;
+      margin-left: -20px;
+      width: calc(100% + 40px);
+
+      border-radius: 0;
+    }
 
     img {
       width: 100%;
@@ -33,6 +79,10 @@
   .txt-wrapper {
     padding-top: 20px;
 
+    @include w768 {
+      padding-top: 0;
+    }
+
     .company__subtitle {
       margin-top: 5px;
 
@@ -42,6 +92,17 @@
       line-height: 55px;
       letter-spacing: -1px;
       color: #090207;
+
+      @include w992 {
+        font-size: 32px;
+        line-height: 41px;
+        letter-spacing: -0.573708px;
+        color: #222222;
+      }
+
+      @include w768 {
+        margin-top: 20px;
+      }
     }
 
     .company__txt {
@@ -53,6 +114,12 @@
       font-size: 18px;
       line-height: 35px;
       color: #313031;
+
+      @include w768 {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+      }
     }
 
     .company-list {
@@ -60,6 +127,19 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 45px;
       margin-top: 60px;
+
+      @include w1392 {
+        grid-template-columns: 1fr;
+      }
+
+      @include w992 {
+        margin-top: 50px;
+        gap: 30px;
+      }
+
+      @include w768 {
+        margin-top: 30px;
+      }
 
       .company-list__title {
         font-family: $font-1;
@@ -77,6 +157,12 @@
         font-size: 18px;
         line-height: 35px;
         color: #313031;
+
+        @include w768 {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 30px;
+        }
       }
     }
   }

@@ -25,15 +25,15 @@
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
-    @@include("../blocks/modules/header/header.html")
+    <!-- @@include("../blocks/modules/header/header.html") -->
     <main>
       @@include("../blocks/modules/top/top.html")
-      @@include("../blocks/modules/services/services.html")
+      <!-- @@include("../blocks/modules/services/services.html") -->
       @@include("../blocks/modules/prices/prices.html")
       @@include("../blocks/modules/company/company.html")
       @@include("../blocks/modules/clients/clients.html")
@@ -45,13 +45,19 @@
     <script>
 const swiper = new Swiper('.clients-slider', {
   loop: true,
-  centeredSlides: true,
-  slidesPerView: 'auto',
-  spaceBetween: 160,
+  slidesPerView: 1,
+  spaceBetween: 40,
   navigation: {
     nextEl: '.clients-slider-button-next',
     prevEl: '.clients-slider-button-prev',
   },
+  breakpoints: {
+    1072: {
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      spaceBetween: 160
+    }
+  }
 });
     </script>
   </body>

@@ -12,6 +12,13 @@
 
   overflow: hidden;
 
+  @include w768 {
+    padding-top: 400px;
+    padding-bottom: 30px;
+
+    background-image: url("../img/top-bg-mob.jpg");
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -24,6 +31,12 @@
 
     background: linear-gradient(180deg, #E1E3EA 0%, rgba(225, 227, 234, 0) 100%);
     transform: rotate(-180deg);
+
+    @include w768 {
+      height: 29px;
+
+      background: #FFFFFF;
+    }
   }
 
   &::after {
@@ -42,15 +55,32 @@
     background-size: contain;
 
     transform: translateX(-50%);
+
+    @include w768 {
+      bottom: calc(100% - 390px);
+
+      width: 351px;
+      height: 374px;
+
+      background-image: url("../img/img13.png");
+    }
   }
 
   .container {
     display: flex;
     justify-content: space-between;
+
+    @include w768 {
+      flex-direction: column;
+    }
   }
 
   .txt-col {
     max-width: 550px;
+
+    @include w768 {
+      max-width: none;
+    }
 
     .top__title {
       font-family: $font-1;
@@ -59,6 +89,13 @@
       line-height: 64px;
       letter-spacing: -0.887698px;
       color: #222222;
+
+      @include w768 {
+        font-size: 38px;
+        line-height: 41px;
+        text-align: center;
+        letter-spacing: -0.573708px;
+      }
     }
 
     .top__txt {
@@ -69,45 +106,11 @@
       font-size: 21px;
       line-height: 35px;
       color: #313031;
-    }
 
-    .btns-wrapper {
-      display: flex;
-      align-items: center;
-      margin-top: 50px;
-
-      .top__btn {
-        color: #FBFBFD;
-
-        background: #F05C28;
-      }
-
-      .prices-link {
-        color: #2B2B2B;
-
-        span {
-          position: relative;
-
-          display: block;
-          padding-right: 20px;
-
-          &::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            right: 0;
-
-            width: 14px;
-            height: 8px;
-
-            background-repeat: no-repeat;
-            background-position: center;
-            background-image: url("../img/arrow.svg");
-            background-size: contain;
-
-            transform: translateY(-50%);
-          }
-        }
+      @include w768 {
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
       }
     }
   }
@@ -119,10 +122,23 @@
     max-width: 360px;
     margin-right: 50px;
 
+    @include w1392 {
+      margin-right: 0;
+    }
+
+    @include w768 {
+      margin-top: 40px;
+      max-width: none;
+    }
+
     .advantages-list__item {
       display: grid;
       grid-template-columns: 86px 1fr;
       gap: 6px 30px;
+
+      @include w768 {
+        grid-template-columns: 76px 1fr;
+      }
 
       &:nth-of-type(1) {
 
@@ -174,6 +190,11 @@
 
       overflow: hidden;
 
+      @include w768 {
+        width: 76px;
+        height: 76px;
+      }
+
       img {
         object-fit: contain;
       }
@@ -185,6 +206,10 @@
       font-size: 20px;
       line-height: 24px;
       color: #222222;
+
+      @include w768 {
+        font-size: 18px;
+      }
     }
 
     .advantages-list__txt {
@@ -192,6 +217,64 @@
       font-size: 16px;
       line-height: 25px;
       color: #313031;
+    }
+  }
+
+  .btns-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+
+    &.btns-wrapper--desktop {
+
+      @include w768 {
+        display: none;
+      }
+    }
+
+    &.btns-wrapper--mobile {
+      display: none;
+
+      @include w768 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 70px;
+        gap: 10px;
+      }
+    }
+
+    .top__btn {
+      color: #FBFBFD;
+
+      background: #F05C28;
+    }
+
+    .prices-link {
+      color: #2B2B2B;
+
+      span {
+        position: relative;
+
+        display: block;
+        padding-right: 20px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 0;
+
+          width: 14px;
+          height: 8px;
+
+          background-repeat: no-repeat;
+          background-position: center;
+          background-image: url("../img/arrow.svg");
+          background-size: contain;
+
+          transform: translateY(-50%);
+        }
+      }
     }
   }
 }
