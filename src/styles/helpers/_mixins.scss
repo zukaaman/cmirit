@@ -17,3 +17,7 @@
 @mixin w600 {
   @media (max-width: 600px) { @content; }
 }
+
+@mixin w360 {
+  @media (max-width: 360px) { @content; }
+}

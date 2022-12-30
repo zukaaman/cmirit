@@ -13,7 +13,7 @@
   overflow: hidden;
 
   @include w768 {
-    padding-top: 400px;
+    padding-top: 460px;
     padding-bottom: 30px;
 
     background-image: url("../img/top-bg-mob.jpg");
@@ -57,7 +57,7 @@
     transform: translateX(-50%);
 
     @include w768 {
-      bottom: calc(100% - 390px);
+      bottom: calc(100% - 440px);
 
       width: 351px;
       height: 374px;
