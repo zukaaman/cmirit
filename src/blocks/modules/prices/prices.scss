@@ -1,4 +1,14 @@
 .prices {
+  position: relative;
+
+  #prices {
+    position: absolute;
+    top: -60px;
+    left: 0;
+
+    width: 1px;
+    height: 1px;
+  }
 
   .title-wrapper {
     display: flex;
@@ -250,7 +260,7 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      background-image: url("../img/img8.svg");
+      background-image: url("../img/img8.png");
 
       @include w768 {
         bottom: calc(100% - 198px);

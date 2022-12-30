@@ -1,4 +1,6 @@
 .clients {
+  position: relative;
+
   padding-top: 160px;
   padding-bottom: 130px;
 
@@ -10,6 +12,15 @@
 
   @include w768 {
     padding: 60px 0 150px;
+  }
+
+  #clients {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 1px;
+    height: 1px;
   }
 
   .title-wrapper {

@@ -30,10 +30,10 @@
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
-    @@include("../blocks/modules/header/header.html")
+    <!-- @@include("../blocks/modules/header/header.html") -->
     <main>
       @@include("../blocks/modules/top/top.html")
-      <!-- @@include("../blocks/modules/services/services.html") -->
+      @@include("../blocks/modules/services/services.html")
       @@include("../blocks/modules/prices/prices.html")
       @@include("../blocks/modules/company/company.html")
       @@include("../blocks/modules/clients/clients.html")
@@ -42,44 +42,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
-    <script>
-
-// header
-document.addEventListener('DOMContentLoaded', function(event) {
-  let burger = document.querySelector('#burger'),
-      mobileMenu = document.querySelector('#mobile-menu'),
-      closeBtn = document.querySelector('#close-btn');
-
-  burger.addEventListener('click', () => {
-    mobileMenu.classList.add('active');
-    closeBtn.classList.add('active');
-  });
-
-  closeBtn.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
-    closeBtn.classList.remove('active');
-  });
-});
-
-// clients
-document.addEventListener('DOMContentLoaded', function(event) {
-  const swiper = new Swiper('.clients-slider', {
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 40,
-    navigation: {
-      nextEl: '.clients-slider-button-next',
-      prevEl: '.clients-slider-button-prev',
-    },
-    breakpoints: {
-      1072: {
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        spaceBetween: 160
-      }
-    }
-  });
-});
-    </script>
   </body>
 </html>

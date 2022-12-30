@@ -1,10 +1,21 @@
 .contacts {
+  position: relative;
+
   padding: 100px 0 130px;
 
   background: #425262;
 
   @include w768 {
     padding: 60px 0 70px;
+  }
+
+  #contacts {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 1px;
+    height: 1px;
   }
 
   .container {
@@ -235,6 +246,7 @@
       color: #ffffff;
 
       border-bottom: 1px solid #FFFFFF;
+      border-radius: 0;
 
       &:focus {
 
